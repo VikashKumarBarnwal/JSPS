@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<context-param>
+	<param-name>AppName</param-name>
+	     <param-value>BookStore</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>Reg</servlet-name>
+		<servlet-class>com.garg.ragister.RegServlet</servlet-class>
+		
+	<init-param>
+	<param-name>Process</param-name>
+	<param-value>CustomerRegistration</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Reg</servlet-name>
+		<url-pattern>/Registeration.hello</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>display</servlet-name>
+		<servlet-class>com.garg.display.DisplayCustServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>display</servlet-name>
+		<url-pattern>/Display.hello</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>  
+    <welcome-file>Register.html</welcome-file>  
+     </welcome-file-list> 
+</web-app>
